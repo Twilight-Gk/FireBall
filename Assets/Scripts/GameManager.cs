@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour {
 
 					// set the end game score
 					gameOverScoreDisplay.text = mainScoreDisplay.text;
-
+                    Time.timeScale = 0;
 					// switch which GUI is showing		
 					mainCanvas.SetActive (false);
 					gameOverCanvas.SetActive (true);

@@ -9,5 +9,6 @@ public class UIButtonLevelLoad : MonoBehaviour {
 	public void loadLevel() {
 		//Load the level from LevelToLoad
 		SceneManager.LoadScene(LevelToLoad);
+        Time.timeScale = 1;
 	}
 }

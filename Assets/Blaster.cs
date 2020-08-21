@@ -13,6 +13,8 @@ public class Blaster : MonoBehaviour
     private GameObject ball;
     public Collider[] enemies;
     public Image bar;
+    public bool refill = true;
+    
     // Start is called before the first frame update
     void Start()
     { 
@@ -23,13 +25,16 @@ public class Blaster : MonoBehaviour
 
     void Blst()
     {
-        if (Input.GetKey(KeyCode.Space) && !activated)
+        if (Input.GetKey(KeyCode.Space) && !activated  && refill)
         {
             activated = true;
             ball.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
             ball.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             Blast.transform.rotation = Quaternion.Euler(blastpos);
             Blast.Play();
+           
+            Refill();
+            
             enemies = Physics.OverlapSphere(ball.transform.position, explosionradius);
             foreach(Collider i in enemies  )
             {
@@ -49,12 +54,32 @@ public class Blaster : MonoBehaviour
 
         }
     }
+    void Refill()
+    {
+        bar.fillAmount = 0f;
+        refill = false;
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 1f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 2f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 3f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 4f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 5f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 1f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 2f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 3f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 4f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 5f);
+        FunctionTimer.Create(() => refill = true, 5f);
+    }
+   
 
     // Update is called once per frame
     void Update()
     {
 
         Blst();
-            
+      
+
+        
+
     }
 }
