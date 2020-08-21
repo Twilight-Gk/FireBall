@@ -58,7 +58,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             }
         }
 
-
+        
         private void FixedUpdate()
         {
             // Call the Move function of the ball controller

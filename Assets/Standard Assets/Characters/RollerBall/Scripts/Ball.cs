@@ -12,8 +12,9 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private const float k_GroundRayLength = 1f; // The length of the ray to check if the ball is grounded.
         private Rigidbody m_Rigidbody;
-
-
+     
+        
+        
         private void Start()
         {
             m_Rigidbody = GetComponent<Rigidbody>();
@@ -40,8 +41,15 @@ namespace UnityStandardAssets.Vehicles.Ball
             if (Physics.Raycast(transform.position, -Vector3.up, k_GroundRayLength) && jump)
             {
                 // ... add force in upwards.
+               
                 m_Rigidbody.AddForce(Vector3.up*m_JumpPower, ForceMode.Impulse);
+                
+                
             }
+           
         }
+       
+            
+
     }
 }
