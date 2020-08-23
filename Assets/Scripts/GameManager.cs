@@ -42,6 +42,10 @@ public class GameManager : MonoBehaviour {
 			player = GameObject.FindWithTag("Player");
 		}
 
+
+        Time.timeScale = 0.5f;
+        FunctionTimer.Create(() => TargetScoreDisplay.enabled = false, 2f);
+        FunctionTimer.Create(() => Time.timeScale = 1, 2f);
 		playerHealth = player.GetComponent<Health>();
 
 		// setup score display

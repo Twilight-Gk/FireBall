@@ -82,11 +82,11 @@ public class MainMenuManager : MonoBehaviour {
 			levelButtonLabel.text = levelname;
 
 			// determine if the button should be interactable based on if the level is unlocked
-			if (PlayerPrefManager.LevelIsUnlocked (levelname)) {
+			/*if (PlayerPrefManager.LevelIsUnlocked (levelname)) {
 				levelButtonScript.interactable = true;
 			} else {
 				levelButtonScript.interactable = false;
-			}
+			}*/
 		}
 	}
 

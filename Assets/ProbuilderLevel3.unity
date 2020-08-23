@@ -3043,6 +3043,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1557666211161871204, guid: 9101c0293300152479581c37a192a227,
+        type: 3}
+      propertyPath: damageOnCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557666211161871204, guid: 9101c0293300152479581c37a192a227,
+        type: 3}
+      propertyPath: damageOnTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1557666211161871231, guid: 9101c0293300152479581c37a192a227,
         type: 3}
       propertyPath: m_Name

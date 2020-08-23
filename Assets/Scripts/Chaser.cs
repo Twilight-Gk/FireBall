@@ -46,7 +46,6 @@ public class Chaser : MonoBehaviour {
             dist = Vector3.Distance(this.gameObject.transform.position, target.transform.position);
             if (dist > 20f)
             {
-                Debug.Log("Constriants in action");
                 this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                 actdist = Vector3.Distance(this.gameObject.transform.position, target.transform.position);

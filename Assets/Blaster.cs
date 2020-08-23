@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Blaster : MonoBehaviour
 {
@@ -25,7 +26,8 @@ public class Blaster : MonoBehaviour
 
     void Blst()
     {
-        if (Input.GetKey(KeyCode.Space) && !activated  && refill)
+        //if (Input.GetKey(KeyCode.Space) && !activated  && refill)
+        if(CrossPlatformInputManager.GetButton("Jump") && !activated && refill)
         {
             activated = true;
             ball.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
@@ -63,11 +65,11 @@ public class Blaster : MonoBehaviour
         FunctionTimer.Create(() => bar.fillAmount += 0.1f, 3f);
         FunctionTimer.Create(() => bar.fillAmount += 0.1f, 4f);
         FunctionTimer.Create(() => bar.fillAmount += 0.1f, 5f);
-        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 1f);
-        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 2f);
-        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 3f);
-        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 4f);
-        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 5f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 0.5f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 1.5f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 2.5f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 3.5f);
+        FunctionTimer.Create(() => bar.fillAmount += 0.1f, 4.5f);
         FunctionTimer.Create(() => refill = true, 5f);
     }
    
