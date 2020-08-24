@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: fe4e130f9947345a2b213cb5038851a2, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8b7dd0809c7c6498789fa32a61eaa6cb, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6110783, g: 0.5546127, b: 0.6512382, a: 1}
+  m_IndirectSpecularColor: {r: 0.6059968, g: 0.5497385, b: 0.6457327, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76806479d916a64aa03f8e3eba7912f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1968818014}
   distance: 3
   height: 30
   rotationDamping: 0
@@ -949,6 +949,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036560977482948401, guid: 72f671642f0db0c45b5e49564f3ecb93,
+        type: 3}
+      propertyPath: spawnPrefab
+      value: 
+      objectReference: {fileID: 7438494788967298231, guid: b79d0b13355dc8f44b7956db61a82656,
+        type: 3}
+    - target: {fileID: 4036560977482948401, guid: 72f671642f0db0c45b5e49564f3ecb93,
+        type: 3}
+      propertyPath: minSecondsBetweenSpawning
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036560977482948401, guid: 72f671642f0db0c45b5e49564f3ecb93,
+        type: 3}
+      propertyPath: maxSecondsBetweenSpawning
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4036560977482948402, guid: 72f671642f0db0c45b5e49564f3ecb93,
         type: 3}
@@ -1735,6 +1751,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4036560977482948401, guid: 72f671642f0db0c45b5e49564f3ecb93,
+        type: 3}
+      propertyPath: spawnPrefab
+      value: 
+      objectReference: {fileID: 7438494788967298231, guid: b79d0b13355dc8f44b7956db61a82656,
+        type: 3}
+    - target: {fileID: 4036560977482948401, guid: 72f671642f0db0c45b5e49564f3ecb93,
+        type: 3}
+      propertyPath: minSecondsBetweenSpawning
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036560977482948401, guid: 72f671642f0db0c45b5e49564f3ecb93,
+        type: 3}
+      propertyPath: maxSecondsBetweenSpawning
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4036560977482948402, guid: 72f671642f0db0c45b5e49564f3ecb93,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2231,7 +2263,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 232397994}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2679,11 +2710,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f1639a477254614b325291560d5739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 909374600}
   gameState: 0
   score: 0
-  canBeatLevel: 1
-  beatLevelScore: 30
+  canBeatLevel: 0
+  beatLevelScore: 10
   mainCanvas: {fileID: 228037846}
   mainScoreDisplay: {fileID: 228037848}
   TargetScoreDisplay: {fileID: 228037847}
@@ -2886,7 +2917,7 @@ Camera:
   m_GameObject: {fileID: 856537575}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.31990921, g: 0.5293575, b: 0.8584906, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
@@ -2945,7 +2976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76806479d916a64aa03f8e3eba7912f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1968818014}
   distance: 25
   height: 15
   rotationDamping: 0
@@ -3220,6 +3251,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad1acc6d0daf092418945d7a61d71673, type: 3}
+--- !u!1 &909374600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4943061730415019940, guid: ad1acc6d0daf092418945d7a61d71673,
+    type: 3}
+  m_PrefabInstance: {fileID: 909374599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &960587668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6291527628202310592, guid: e62fd99fc5d59584191abd2442e942a7,
@@ -3752,7 +3789,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1058300781}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5060,7 +5096,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 370603289}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5153,6 +5188,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036560977482948401, guid: 72f671642f0db0c45b5e49564f3ecb93,
+        type: 3}
+      propertyPath: spawnPrefab
+      value: 
+      objectReference: {fileID: 7438494788967298231, guid: b79d0b13355dc8f44b7956db61a82656,
+        type: 3}
+    - target: {fileID: 4036560977482948401, guid: 72f671642f0db0c45b5e49564f3ecb93,
+        type: 3}
+      propertyPath: minSecondsBetweenSpawning
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036560977482948401, guid: 72f671642f0db0c45b5e49564f3ecb93,
+        type: 3}
+      propertyPath: maxSecondsBetweenSpawning
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4036560977482948402, guid: 72f671642f0db0c45b5e49564f3ecb93,
         type: 3}
@@ -5836,6 +5887,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6291527628202310592, guid: e62fd99fc5d59584191abd2442e942a7,
     type: 3}
   m_PrefabInstance: {fileID: 1871092523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1968818014 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4943061730414599044, guid: ad1acc6d0daf092418945d7a61d71673,
+    type: 3}
+  m_PrefabInstance: {fileID: 909374599}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1970752136
 GameObject:
@@ -6612,7 +6669,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1371874965}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6946,7 +7002,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 117519801}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7301,7 +7356,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 46215425}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7728,7 +7782,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1593341253}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8008,7 +8061,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 168200156}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8430,7 +8482,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1299537858}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8750,7 +8801,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1423039633}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9140,7 +9190,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 109001382}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9495,7 +9544,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1590891501}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9863,7 +9911,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 2060946425}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
